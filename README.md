@@ -1,2 +1,6 @@
 # dotfiles
-my dotfiles
+dotfiles for:
+bash
+zsh
+vim
+tmux
