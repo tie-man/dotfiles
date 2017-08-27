@@ -18,7 +18,7 @@ filetype plugin on
 
 execute pathogen#infect()
 set background=dark
-colorscheme elflord
+colorscheme pablo
 set t_Co=256
 
 "noremap <up> <C-W>+
@@ -31,3 +31,21 @@ let @h = 'o#include <>ha'
 let @d = 'o#define '
 let @s = 'ostruct x {o} ;k0Ws'
 let @f = 'ofor(int i=0; i<n; i++) {o}kWr'
+
+"nerdtree
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+"lightline
+let g:lightline = {
+\ 'active': {
+\   'left': [ [ 'mode', 'paste' ],
+\             [	'fugitive', 'readonly', 'filename', 'modified' ] ]
+\ },
+\ 'component': {
+\    'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+\ },
+\ 'component_visible_condition': {
+\    'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+\ }
+\ }

@@ -1,6 +1,6 @@
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit promptinit
@@ -33,10 +33,10 @@ alias -g G='| grep'
 alias -g M='| more'
 alias -g C='| wc -l'
 alias -g S='&> /dev/null'
-alias -g GP='| gnuplot'
+#alias -g GP='| gnuplot'
 
 #pacman
-alias pac='sudo pacman'
+#alias pac='sudo pacman'
 alias pacs='sudo pacman -S'
 alias pacss='pacman -Ss'
 alias pacr='sudo pacman -R'
@@ -51,9 +51,8 @@ alias ll='ls -al'
 alias sl=ls
 
 #utils
-alias cl=clear
 alias ka=killall
-alias ok='ping archlinux.org'
+alias ok='ping -c 5 archlinux.org'
 
 #programs
 alias py3=python3
@@ -64,9 +63,9 @@ alias _=sudo
 
 #systemctl
 alias sctl='sudo systemctl'
-alias sctle='sudo systemctl enable'
-alias sctld='sudo systemctl disable'
-alias sctlis='sudo systemctl is-enabled'
+#alias sctle='sudo systemctl enable'
+#alias sctld='sudo systemctl disable'
+#alias sctlis='sudo systemctl is-enabled'
 
 #misc
 alias q=quit
