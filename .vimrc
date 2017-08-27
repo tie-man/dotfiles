@@ -49,3 +49,6 @@ let g:lightline = {
 \    'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
 \ }
 \ }
+
+"rainbow
+let g:rainbow_active = 1
